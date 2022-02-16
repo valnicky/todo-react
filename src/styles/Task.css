@@ -1,0 +1,10 @@
+.task__li {
+  background-color: #F4EBD0;
+}
+
+.task__li .task__btn-delete {
+  border: 5px solid #ECF87F;
+  color: #fef;
+  background-color: #81B622;
+}
+/*# sourceMappingURL=Task.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACN,gBAAgB,EAAE,OAAO;CAM5B;;AAPD,AAEI,SAFK,CAEL,iBAAiB,CAAC;EACd,MAAM,EAAE,iBAAiB;EACzB,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,OAAO;CAC5B",
+    "sources": [
+        "Task.scss"
+    ],
+    "names": [],
+    "file": "Task.css"
+}
