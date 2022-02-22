@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import './App.css';
 import tasks from './tasks.json'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 //components
 import TaskForm from './components/TaskForm'
@@ -41,18 +41,16 @@ class App extends Component {
     }
     
   render(){
-      return  <div className = "App  mt-5 p-md-3 p-sm-0 p-lg-5 form-control" >
-                      <Router>
-                              <Route path="/" render={() => {
-                                    return (<div>
-                                                    <TaskForm addTask={this.addTask}/>
-                                                    <Tasks tasks={this.state.tasks} deleteTask={this.deleteTask} checkDone={this.checkDone}/>
-                                                </div>)
-                              }}>
-                                
-                              </Route>
-                        </Router>
-                            <Posts />
+      return  <div className = "App mx-auto my-5 p-md-3 p-sm-0 p-lg-5 " >        
+                    <BrowserRouter>
+                                <Routes>
+                                        <Route path="/" element={<div><TaskForm addTask={this.addTask}/><Tasks tasks={this.state.tasks} deleteTask={this.deleteTask} checkDone={this.checkDone} /></div>}/>
+                                                             
+                                       {/* <Route path="/"  element={<Tasks tasks={this.state.tasks} deleteTask={this.deleteTask} checkDone={this.checkDone} key={this.state.tasks.length}/>}>    </Route>       */}   
+                                                        
+                                        <Route path="/posts" element= {<Posts key={this.state.tasks.id}/>} ></Route>
+                              </Routes>
+                    </BrowserRouter>
                  </div>
   }
 }

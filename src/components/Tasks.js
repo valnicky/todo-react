@@ -7,7 +7,7 @@ class Tasks extends Component {
     
     render(){
           return  this.props.tasks.map(task => 
-                         <Task 
+                         <Task className="task__li my-2  mx-auto py-2 w-sm-100 w-xl-50 d-flex bd-highlight justify-content-lg-around justify-content-sm-around justify-content-around justify-content-xl-evenly align-items-center "
                          key={task.id} 
                          task={task}
                          deleteTask={this.props.deleteTask}
